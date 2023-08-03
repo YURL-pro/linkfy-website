@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="63.879002mm"
+   height="42.580002mm"
+   viewBox="0 0 63.879001 42.580002"
+   version="1.1"
+   id="svg352"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="圖畫.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview354"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.74564396"
+     inkscape:cx="336.62178"
+     inkscape:cy="348.02133"
+     inkscape:window-width="1433"
+     inkscape:window-height="1040"
+     inkscape:window-x="176"
+     inkscape:window-y="84"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs349" />
+  <g
+     inkscape:label="圖層 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2391-1-3-9"
+       transform="matrix(0.36502191,-0.09580583,0,0.36502191,-13.688283,12.933332)">
+      <path
+         id="rect228-1-2-3-5"
+         style="color:#000000;fill:#000000;-inkscape-stroke:none"
+         d="M 42.500248,4.7640503 A 5,5 0 0 0 37.500037,9.7642619 V 9.9358276 71.639555 a 5,5 0 0 0 5.000211,4.999695 H 82.499874 V 66.638826 H 47.499943 V 51.464042 14.763957 9.7642619 4.7640503 Z m 14.999601,0 v 9.9999067 h 84.999981 5.00021 v 4.314465 47.560404 h -9.99991 V 76.63925 h 14.99961 a 5,5 0 0 0 5.00021,-4.999695 V 19.078422 14.763957 9.0785156 h -0.0476 A 5,5 0 0 0 152.5002,4.7640503 h -5.00021 -5.00021 z M 92.49978,66.638826 V 76.63925 h 35.00045 V 66.638826 Z" />
+      <path
+         id="rect228-3-1-7-3-1"
+         style="color:#000000;fill:#000000;stroke-width:0.8;stroke-dasharray:none"
+         d="m 97.499992,34.764286 a 5,5 0 0 0 -5.000212,5.000212 v 0.171566 61.703206 a 5,5 0 0 0 5.000212,5.00022 H 102.5002 V 101.63927 96.639062 82.260095 44.764193 h 34.99993 v -9.999907 z m 50.000048,0 v 9.999907 h 9.99991 v -9.999907 z m 19.99981,0 v 9.999907 h 30.00024 4.99969 v 51.874869 h -4.31394 -85.68573 v 10.000428 h 85.68573 4.31446 5.68544 v -0.0496 a 5,5 0 0 0 4.31447,-4.95112 V 96.639062 91.638851 49.079175 44.764193 39.078752 h -0.0475 A 5,5 0 0 0 207.5,34.764286 h -4.9997 -5.00021 z" />
+    </g>
+  </g>
+</svg>
