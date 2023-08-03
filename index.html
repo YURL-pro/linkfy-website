@@ -60,11 +60,14 @@
             color: #1d1d1f;
         }
 
+        main {
+            margin-top: -6em;
+        }
+
         header {
             display: flex;
             height: 100vh;
             height: 100svh;
-            margin-top: -6em;
         }
 
         section {
@@ -92,6 +95,7 @@
 
         header img {
             height: 80vh;
+            margin-left: 2em;
         }
 
         h1 {
@@ -106,10 +110,18 @@
             font-weight: 400;
             line-height: 1.5;
             margin-bottom: 1.5em;
+            text-align: right;
         }
 
         h2 {
-            font-size: 2em;
+            font-size: 3.5rem;
+            text-align: center;
+            margin-top: 3em;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.6rem;
         }
 
         .ball {
@@ -155,12 +167,15 @@
             justify-content: center;
             flex-grow: 1;
         }
-        .decoration div:first-child{
+
+        .decoration div:first-child {
             justify-content: flex-start;
         }
-        .decoration div:last-child{
+
+        .decoration div:last-child {
             justify-content: flex-end;
         }
+
         .dots {
             display: flex;
             width: 100%;
@@ -177,7 +192,8 @@
             height: 1.5rem;
             gap: .8rem;
         }
-        .dots>div:last-child{
+
+        .dots>div:last-child {
             justify-content: flex-end;
         }
 
@@ -189,15 +205,18 @@
         }
 
         .uses {
-            font-size: calc(100vh / 8);
+            font-size: calc((100vh - 8.1rem ) / 8);
         }
 
         .uses div {
             height: 1.1em;
             width: fit-content;
             white-space: nowrap;
-            animation: marquee 40s linear infinite;
+            animation: marquee 60s linear infinite;
             color: #9a9a9a;
+        }
+        .uses div:nth-child(2n){
+            animation: marqueeBack 60s linear infinite;
         }
 
         footer {
@@ -208,8 +227,12 @@
             background-color: #f5f5f7;
         }
 
-        #uses h2 {
-            text-align: center;
+        #safe {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #000000;
+            color: #ffffff;
         }
 
         @keyframes marquee {
@@ -219,6 +242,16 @@
 
             100% {
                 transform: translateX(-100%);
+            }
+
+        }
+        @keyframes marqueeBack {
+            0% {
+                transform: translateX(-100vw);
+            }
+
+            100% {
+                transform: translateX(100%);
             }
 
         }
@@ -270,7 +303,7 @@
             </div>
         </header>
         <section>
-            <h2>逼一下</h2>
+            <h2>嗶一下</h2>
             <h3>輕鬆支付</h3>
         </section>
         <section>
@@ -279,11 +312,12 @@
         </section>
         <section>
             <h2>手機直接儲值</h2>
-            <h3>支持優游付APP</h3>
+            <h3>支援悠遊付APP</h3>
         </section>
         <section id="uses">
 
             <h2>悠遊卡能的地方都可以用</h2>
+            <h3>這個跑馬燈有一分鐘</h3>
             <div class="uses">
                 <div> 捷運 客運 停車場 台鐵 高鐵 自行車 計程車 船舶 自行車 復康巴士 桃園捷運 高雄捷運 台北捷運 新北捷運 臺中捷運 北部地區客運業者 中部地區客運業者 南部地區客運業者 東部地區客運業者
                     離島地區客運業者 臺北市停管處 日月亭 俥亭 力揚停車場 永固便利停車 台灣國際開發 大日開發 臺南市智慧停車柱 嘟嘟房 新北市交通局之指定停車場 臺中市停車管理處之指定停車場 臺鐵 台灣高鐵
@@ -327,6 +361,11 @@
 
 
             </div>
+        </section>
+        <section id="safe">
+            <h2>比普通悠遊卡更加安全</h2>
+            <p>LinkCase超級悠遊卡支援到 ISO/IEC 14443-4 傳輸協議。透過虛擬機方式讓卡片本身變得更難破解，單筆消費可達一萬元<br>
+                LinkCase超級悠遊卡本身為一張 CPU 智慧卡（Smart Card），可以做複雜的運算。比起過往的一般悠遊卡更有擴展性，甚至埋藏了尚未公開的隱藏功能...</p>
         </section>
         <section>
             <h2>填寫問卷</h2>
