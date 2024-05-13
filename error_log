@@ -1,0 +1,4 @@
+[18-Jul-2023 14:15:41 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[18-Jul-2023 15:19:11 UTC] Cron 重新排程事件時發生錯誤，勾點: action_scheduler_run_queue，錯誤代碼: invalid_schedule，錯誤訊息: 事件排程不存在。，日期: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[01-Aug-2023 10:53:26 UTC] Cron 重新排程事件時發生錯誤，勾點: elementor_1_elementor_updater_cron，錯誤代碼: invalid_schedule，錯誤訊息: 事件排程不存在。，日期: {"schedule":"elementor_1_elementor_updater_cron_interval","args":[],"interval":300}
+[02-Aug-2023 16:32:53 UTC] Cron 重新排程事件時發生錯誤，勾點: woocommerce_geoip_updater，錯誤代碼: invalid_schedule，錯誤訊息: 事件排程不存在。，日期: {"schedule":"fifteendays","args":[],"interval":1296000}

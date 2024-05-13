@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            display: block;
+        }
+
+        body {
+            background-color: #fafafa;
+            color: #1d1d1f;
+            line-height: 1.4705882353;
+            font-family: 'Racing Sans One', cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            height: 6rem;
+            padding: 3em;
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            font-weight: 600;
+            background-color: #fafafaaf;
+            backdrop-filter: blur(5px);
+            z-index: 100;
+        }
+
+        #logo {
+            height: 1.5em;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            padding: 0 1em;
+            height: 3em;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin-left: 1em;
+        }
+
+        li a {
+            text-decoration: none;
+            color: #1d1d1f;
+        }
+
+        main {
+            margin-top: -6em;
+        }
+
+        header {
+            display: flex;
+            height: 100svh;
+        }
+
+        section {
+            height: calc(100svh - 6rem);
+        }
+
+        header>div {
+            flex: 1;
+            display: flex;
+            position: relative;
+            z-index: 4;
+        }
+
+        header>div:first-child {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        header>div:nth-child(2) {
+            align-items: center;
+        }
+
+        header img {
+            height: 80vh;
+            margin-left: 2em;
+        }
+
+        h1 {
+            font-size: 6em;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0.2em;
+        }
+
+        h1+h2 {
+            font-size: 1.5em;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 1.5em;
+            text-align: right;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.6rem;
+        }
+
+        .ball {
+            position: absolute;
+            width: 60svh;
+            height: 60svh;
+            border-radius: 50%;
+            background-color: #5ca0ff;
+            bottom: 0;
+            left: 2em;
+            z-index: 1;
+            filter: blur(3em);
+            opacity: .9;
+        }
+
+        .ball.mid {
+            left: 50%;
+            background-color: #5ce1ff;
+            z-index: 3;
+        }
+
+        .ball.right {
+            left: 58%;
+            background-color: #fffc5c;
+            z-index: 2;
+        }
+
+        .decoration {
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 3rem 3em;
+            font-weight: 600;
+            font-size: 1.5rem;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .decoration div {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .decoration div:first-child {
+            justify-content: flex-start;
+        }
+
+        .decoration div:last-child {
+            justify-content: flex-end;
+        }
+
+        .dots {
+            display: flex;
+            width: 100%;
+            height: 1.5rem;
+            position: absolute;
+            top: 6em;
+            left: 0;
+            padding: 0 6rem;
+        }
+
+        .dots>div {
+            display: flex;
+            flex-grow: 1;
+            height: 1.5rem;
+            gap: .8rem;
+        }
+
+        .dots>div:last-child {
+            justify-content: flex-end;
+        }
+
+        .dots>div>div {
+            width: .5rem;
+            height: .5rem;
+            border-radius: 50%;
+            background-color: #1d1d1f;
+        }
+
+        .uses {
+            font-size: calc((100vh - 8.1rem) / 8);
+        }
+
+        .uses div {
+            height: 1.1em;
+            width: fit-content;
+            white-space: nowrap;
+            animation: marquee 60s linear infinite;
+            color: #9a9a9a;
+        }
+
+        .uses div:nth-child(2n) {
+            animation: marqueeBack 60s linear infinite;
+        }
+
+
+        footer {
+            height: 3em;
+            padding: 2em 3em;
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f7;
+        }
+
+        #safe {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100vw);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+
+        }
+
+        @keyframes marqueeBack {
+            0% {
+                transform: translateX(-100vw);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        #pay{
+            display: flex;
+            flex-direction: column;
+        }
+        #pay>div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        #pay>div>div:first-child,
+        #pay>div>div:last-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        #pay .line {
+            height: calc(100% - 3rem);
+            width: 1px;
+            background-color: #6a6a6a;
+        }
+
+        #pay img {
+            height:30svh;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <img src="logo+text.svg" alt="" id="logo">
+        <ul>
+            <li><a href="">填寫問卷</a></li>
+            <li><a href="">關於我們</a></li>
+            <li><a href="">嘖嘖募資</a></li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <div>
+                <h1>Linkfy <br>Easy Case</h1>
+                <h2>卡夾式電子票證手機殼</h2>
+            </div>
+            <div><img src="eazycase.webp" alt="">
+            </div>
+            <div class="ball"></div>
+            <div class="ball mid"></div>
+            <div class="ball right"></div>
+            <div class="decoration">
+                <div>嘖嘖募資中</div>
+                <div>+</div>
+                <div>+</div>
+                <div>+</div>
+                <div>+</div>
+                <div>嘖嘖募資中</div>
+            </div>
+            <div class="dots">
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </header>
+        <section id="pay">
+            <h2>嗶一下</h2>
+            <h3>輕鬆支付</h3>
+            <div>
+                <div><img src="eazycase.webp" alt=""></div>
+                <div class="line"></div>
+                <div><img src="eazycase.webp" alt=""></div>
+            </div>
+        </section>
+        <section>
+            <h2>卡夾式設計</h2>
+            <h3>不同卡片輕鬆切換</h3>
+        </section>
+        <section>
+            <h2>手機直接儲值</h2>
+            <h3>支援悠遊付APP</h3>
+        </section>
+        <section id="uses">
+
+            <h2>悠遊卡能的地方都可以用</h2>
+            <h3>這個跑馬燈有一分鐘</h3>
+            <div class="uses">
+                <div> 捷運 客運 停車場 台鐵 高鐵 自行車 計程車 船舶 自行車 復康巴士 桃園捷運 高雄捷運 台北捷運 新北捷運 臺中捷運 北部地區客運業者 中部地區客運業者 南部地區客運業者 東部地區客運業者
+                    離島地區客運業者 臺北市停管處 日月亭 俥亭 力揚停車場 永固便利停車 台灣國際開發 大日開發 臺南市智慧停車柱 嘟嘟房 新北市交通局之指定停車場 臺中市停車管理處之指定停車場 臺鐵 台灣高鐵
+                    高雄市公共腳踏車 台灣大車隊計程車 其它車隊計程車 台北航運 順風航業 連江縣島際船舶 長弘航業 金門縣公共輪渡 高雄市輪船 微笑單車YouBike 新北市河濱自行車 臺北市河濱自行車
+                    臺南市公共自行車 金門縣公共自行車 高雄市公共自行車 復康巴士 行政規費 圖書館 公益團體 臺北市政府 新北市政府 基隆市政府 桃園市政府 新竹市政府 新竹縣政府 苗栗縣政府 臺中市政府 彰化縣政府
+                    南投縣政府 雲林縣政府 嘉義市政府 臺南市政府 臺東縣政府 澎湖縣政府 金門縣政府 司法院 衛生福利部 臺北市圖書館 新北市圖書館 宜蘭縣圖書館 桃園市圖書館 臺中市圖書館 苗栗縣圖書館 臺東縣圖書館
+                    基隆市圖書館 彰化縣圖書館 社團法人中華民國腦性麻痺協會 財團法人中華民國唐氏症基金會 台灣運動彩券行 財團法人蒲公英希望基金會 社團法人台灣基督教好牧人全人關顧協會 靖娟兒童安全文教基金會
+                </div>
+                <div>超商 超市 量販 伴手禮 臺灣菸酒 7-ELEVEN 全家 OK 萊爾富 安永鮮物 美廉社 心樸市集 美廉城超 新北市樹林區農會 Jasons超市 楓康超市 國軍福利站 聖德科斯 台糖健康超市
+                    棉花田生機園地 新北市深坑區農會生鮮超市 新竹市農會供銷部 全聯福利中心 家樂福 大潤發 愛買 台糖量販 黑橋牌 新東陽 義美食品 先麥食品 玉珍齋 維格餅家
+                    圖書文具 藥妝 生活百貨 服飾 物流 運動量販 九乘九文具專家 微學館 三民書局 久大文具 敦煌書局 金石堂書店 101文具天堂 墊腳石 大樹連鎖藥局 台安藥局 康是美 屈臣氏 POYA寶雅 小北百貨
+                    寶家-五金百貨 全國電子 普雷伊 日本橋3C 燦坤 神腦 無印良品(部分百貨門市無法使用悠遊卡) 金興發生活百貨 彩遊館 光南大批發 大創 icolor 順豐速運 嘉里大榮物流 迪卡儂
+                    飲料冰品 咖啡 餐廳小吃 麵包蛋糕 速食餐廳 早餐店 百貨商場美食街 COMEBUY CoCo都可 丫寶Lemon 茶湯會 春陽茶事CHUNYANG 水巷茶弄 TeaTop台灣第一味 一芳台灣水果茶
+                    TEA'S原味 麥吉machimachi 珍煮丹 清心福全 鮮茶道 康青龍人文茶飲 鮮自然 天仁茗茶 樂法 ColdStone 85度c 50嵐 鮮芋仙 迷客夏 彼得好咖啡 星巴克 ISCOFFEE
+                </div>
+                <div>怡客咖啡 丹堤咖啡 KOI咖啡 伯朗咖啡 爭鮮外帶 潮味決 老先覺 品川蘭 四海遊龍 八方雲集 正忠排骨飯 海瑞摃丸 福勝亭 三商鮮五丼 大食代 大心新泰式麵食 炸雞大獅 鬍鬚張 三商巧福
+                    愛不囉嗦庇護工場 樂田麵包屋 馬可先生麵包坊 福圓號 MisterDonut 麵包優先 Yamazaki 樂凡手感烘焙 亞都麗緻大飯店 聖瑪莉 復興空廚 臻焙烘坊 德克士 SUBWAY 梁社漢排骨
+                    麥當勞 BurgerKing漢堡王 必勝客 肯德基 拿坡里炸雞 達美樂比薩 頂呱呱 拿坡里披薩 摩斯漢堡 QBurger 拉亞漢堡 麥味登 QKBRUNCH 潤泰CITYLINK內湖店
+                    微風BREEZE 誠品 MitsuiShoppingParkLaLaport台中 中友百貨 遠東SOGO 新光三越 潤泰CITYLINK松山壹號店 潤泰CITYLINK松山貳號店 京站時尚廣場
+                    台茂購物中心 大江購物中心 台北101 好食城 環球購物中心 遠東巨城購物中心 誠盟 潤泰CITYLINK南港店 昇恆昌免稅商店(餐飲及咖啡品牌) 澎坊免稅商店(餐飲及咖啡品牌) 義美吉盛
+                    Beyond比漾廣場
+                </div>
+                <div>中平商圈 桃園捷運A8商圈 中原商圈 桃園藝文商圈 基隆廟口商圈 電子街商圈 自由路商圈 繼光街商圈 東海藝術街商圈 逢甲商圈 大隆路商圈 東勢商圈 太平商圈 天津街商圈 美術綠園道商圈 新社商圈
+                    鹿港天后宮商圈 金門商圈
+                    電影院 遊樂園 DVD 運動中心 場館門票 宗教服務 觀光景點 秀泰影城 臺北市立動物園 臺北市兒童新樂園 麗寶樂園 8大森林樂園 如果兒童劇團 小人國 樂到家 臺北市士林運動中心 臺北市大安運動中心
+                    臺北市中山運動中心 臺北市文山運動中心 臺北市信義運動中心 臺北市南港運動中心 臺北市萬華運動中心 臺北市松山運動中心 臺北市大同運動中心 臺北市中正運動中心 臺北市內湖運動中心 臺北市北投運動中心
+                </div>
+                <div>中和運動中心 蘆洲運動中心 土城運動中心 新莊運動中心 三重運動中心 淡水運動中心 樹林運動中心 板橋運動中心 汐止運動中心 永和運動中心 朝馬運動中心 哈瑪星台灣鐵道館 臺北市立美術館 台北偶戲館
+                    國立故宮博物院 台北當代藝術館 國立臺灣科學教育館 國立臺灣博物館 國立臺灣史前文化博物館 國立自然科學博物館 石尚自然探索屋 臺南市南瀛科學教育館 松山慈惠堂 大甲鎮瀾宮 郭元益糕餅博物館士林館
+                    維格餅家鳳梨酥夢工廠 台灣不二衛生套知識館 光淙金工藝術館 玉美人孕婦裝觀光工廠 阮的肉干產業概念館 宏洲磁磚觀光工廠 大黑松小倆口-牛軋糖創意博物館 吳福洋襪子故事館 王鼎時間科藝體驗館 新旺集瓷
+                    新太源藝術工坊 手信坊創意和?子文化館 四季紙品手創館 樂活襪之鄉博物館 貓空纜車 關渡自然公園 淡水情人塔 野柳地質公園 桃園市政府風景區管理處
+                </div>
+                <div> 自動販賣機 置物櫃 物流櫃 充電/換油站 自助洗衣 自助列印 創易加國際股份有限公司 黑松 可口可樂 統一速邁 儲存易迷你空間 中華郵政i郵箱 宅配通 悠客 享印膠囊 佳能國際
+                    加油站 全國加油站 台灣中油直營及部分加盟站 台亞加油站 速邁樂加油站 台糖油品事業部
+                    學校 東華大學 中央大學 臺東大學 長榮大學 致理科技大學 醒吾科技大學 東海大學 建國科技大學 大同大學 中原大學 花蓮高級工業職業學校 中興大學 中華大學 中華醫事科技大學 臺灣大學 聯合大學
+                    交通大學 清華大學 逢甲大學 世新大學 臺北科技大學 中國科技大學 雲林科技大學 玄奘大學 中正大學 政治大學 臺灣科技大學 龍華科技大學 高雄科技大學 海洋大學 臺灣藝術大學 臺北市立大學 醫院
+                    診所 藥局 臺北市立聯合醫院 新北市立聯合醫院 宏其婦幼醫院 彰化基督教醫院 鹿港基督教醫院 員林基督教醫院 壢新醫院 台北長庚紀念醫院 羅東博愛醫院 三軍總醫院 馬偕紀念醫院
+                    天成醫療體系天晟醫院|楊梅天成醫院 中美醫院 樂活診所 維康醫療用品
+                </div>
+
+
+
+            </div>
+        </section>
+        <section id="safe">
+            <h2>比普通悠遊卡更加安全</h2>
+            <p>LinkCase超級悠遊卡支援到 ISO/IEC 14443-4 傳輸協議。透過虛擬機方式讓卡片本身變得更難破解，單筆消費可達一萬元<br>
+                LinkCase超級悠遊卡本身為一張 CPU 智慧卡（Smart Card），可以做複雜的運算。比起過往的一般悠遊卡更有擴展性，甚至埋藏了尚未公開的隱藏功能...</p>
+        </section>
+        <section>
+            <h2>填寫問卷</h2>
+            <h3>抽取好禮</h3>
+        </section>
+        <footer>Copyright © 2023 Linkfy</footer>
+    </main>
+</body>
+
+</html>

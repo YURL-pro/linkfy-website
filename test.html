@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Picker Button</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+  #color-picker {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <button id="color-picker"></button>
+
+  <script>
+    const colorPicker = document.getElementById('color-picker');
+    
+    const colors = ['#ff0000', '#00ff00', '#0000ff'];
+    let currentColorIndex = 0;
+    
+    colorPicker.style.backgroundColor = colors[currentColorIndex];
+    
+    colorPicker.addEventListener('click', () => {
+      currentColorIndex = (currentColorIndex + 1) % colors.length;
+      colorPicker.style.backgroundColor = colors[currentColorIndex];
+      document.body.style.backgroundColor = colors[currentColorIndex];
+    });
+  </script>
+</body>
+</html>
